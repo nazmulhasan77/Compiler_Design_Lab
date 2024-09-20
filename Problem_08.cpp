@@ -38,7 +38,7 @@ int main() {
 
     cout << endl << endl;
 
-    freopen("8.txt", "r", stdin);
+    freopen("input_8.txt", "r", stdin);
     string str;
 
     while (getline(cin, str)) {
