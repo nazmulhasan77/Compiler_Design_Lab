@@ -2,6 +2,7 @@ int
 while
 white
 if
+xor_eq
 id
 _x
 8.7

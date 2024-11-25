@@ -1,7 +1,7 @@
 /* Problem 04:
 	    Write a program to build a lexical analyzer implementing the following regular expressions.
 	    It takes a text as input from a file (e.g. input.txt) and displays output in console mode:
-	        Integer variable = (i-nI-N)(a-zA-Z0-9)*
+	        Integer variable = (i-n I-N)(a-z A-Z 0-9)*
 	        ShortInt Number = (1-9)|(1-9)(0-9)|(1-9)(0-9)(0-9)|(1-9)(0-9)(0-9)(0-9)
 	        LongInt Number = (1-9)(0-9)(0-9)(0-9)(0-9)+
 	        Invalid Input or Undefined = otherwise */
@@ -16,14 +16,16 @@ bool isInt(string word) {
         if(!isdigit(word[i])) return false;
     }
     return true;
-        
+}
       
 
 bool isVariable(string word) {
 
-    if(tolower(word[0]) < 'i' or tolower(word[0]) > 'n') return false;
+    if(tolower(word[0]) < 'i' or tolower(word[0]) > 'n') 
+    return false;
     for(int i = 1; word[i]; i++) {
-        if(isalnum(word[i])) continue;
+        if(isalnum(word[i])) 
+        continue;
         else return false;
     }
     return true;
